@@ -181,7 +181,7 @@ td {
   font-size: clamp(0.875rem, 3.5vw, var(--body-size));
   font-weight: 600;
   padding: 0.3rem 0.8rem;
-  border-radius: 50px;
+  border-radius: 1rem;
   color: var(--bright-blue);
 }
 
@@ -210,8 +210,8 @@ td:nth-child(4) {
 }
 
 th:nth-child(4) {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 th:nth-child(4) .plan-name-tag {
@@ -265,8 +265,8 @@ td:nth-child(4) a:hover {
 
 table tr:last-child td:nth-child(4) {
   background-color: var(--brown);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 table tr:last-child td,
