@@ -1,0 +1,295 @@
+/* Start CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: inherit;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+html {
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* End CSS Reset */
+
+/* Start Global Styles */
+:root {
+  /* Colors */
+  --dark-blue: #121826;
+  --bright-blue: #263fa9;
+  --dark-gray: #4d5562;
+  --light-gray-one: #e5e7eb;
+  --light-gray-two: #4d556233;
+  --brown: #7c4f1e;
+  --snow-white: #f8fafc;
+
+  /* Typography */
+  --heading-size: 2rem;
+  --price-tag-size: 4rem;
+  --body-size: 1rem;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  background-color: var(--snow-white);
+  text-align: center;
+  padding: 2rem;
+  border-bottom: var(--light-gray-one) 1px solid;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 3.5vw, var(--heading-size));
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.description {
+  max-width: 28rem;
+  text-wrap: wrap;
+  font-size: clamp(0.875rem, 3.5vw, var(--body-size));
+  color: var(--dark-gray);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+/* Table Styling */
+table {
+  width: 90%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--light-gray-one);
+}
+
+/* Plan Header Styling */
+.plan-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.plan-name-tag {
+  font-size: clamp(0.875rem, 3.5vw, var(--body-size));
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  color: var(--bright-blue);
+}
+
+.plan-price {
+  font-size: var(--price-tag-size);
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+th p {
+  font-size: clamp(0.875rem, 3.5vw, var(--body-size));
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
+th:nth-child(1) {
+  text-align: left;
+  background-color: var(--snow-white);
+  color: var(--dark-blue);
+}
+
+/* Highlight Popular Plan */
+th:nth-child(4),
+td:nth-child(4) {
+  background-color: var(--dark-blue);
+}
+
+th:nth-child(4) {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+th:nth-child(4) .plan-name-tag {
+  color: var(--snow-white);
+  background-color: var(--bright-blue);
+}
+
+th:nth-child(4) .plan-price {
+  color: var(--snow-white);
+}
+
+th:nth-child(4) p {
+  color: var(--light-gray-one);
+}
+
+td:nth-child(4) {
+  color: var(--snow-white);
+  border-bottom: var(--light-gray-two) 1px solid;
+}
+
+/* Checkmarks */
+td img {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+
+/* Buttons */
+td a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: var(--bright-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+td:nth-child(4) a {
+  background-color: var(--brown);
+  color: var(--snow-white);
+}
+
+table tr:last-child td:nth-child(4) {
+  background-color: var(--brown);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+table tr:last-child td,
+table tr:last-child th:nth-child(1) {
+  border: none;
+  background-color: #ffffff;
+}
+
+table thead tr:first-child th {
+  border: none;
+}
+
+@media (min-width: 64rem) and (max-width: 80rem) {
+  /* Hide the second column */
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 64rem) {
+  table th:nth-child(3),
+  table td:nth-child(3),
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    display: none;
+  }
+
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
