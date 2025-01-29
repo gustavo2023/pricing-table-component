@@ -250,9 +250,17 @@ td a {
   font-weight: 600;
 }
 
+td a:hover {
+  color: #18255f;
+}
+
 td:nth-child(4) a {
   background-color: var(--brown);
   color: var(--snow-white);
+}
+
+td:nth-child(4) a:hover {
+  color: #b9b9b9;
 }
 
 table tr:last-child td:nth-child(4) {
