@@ -164,6 +164,7 @@ th,
 td {
   padding: 1rem;
   border-bottom: 1px solid var(--light-gray-one);
+  font-size: var(--body-size);
 }
 
 /* Plan Header Styling */
@@ -286,9 +287,9 @@ table thead tr:first-child th {
     display: none;
   }
 
-  table th:nth-child(1),
-  table td:nth-child(1) {
-    text-overflow: ellipsis;
+  td,
+  th {
+    font-size: 0.875rem;
   }
 
   .plan-price {
